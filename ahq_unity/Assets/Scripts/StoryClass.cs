@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class StoryClass : MonoBehaviour
 {
-    public Text StoryText;
+    public string StoryText;
     public string Author;
-
+    public TextField m_TextField;
     private int StoryID;
     private string CreationTime;
 
@@ -23,8 +23,10 @@ public class StoryClass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StoryText = m_TextField.stringToEdit;
         Debug.Log(CreationTime + "\tThis is a StoryID " + StoryID + 
                 " and this is the judgement " + Judgement);
+        Debug.Log("Text input: " + StoryText);
     }
 
     public void SetJudgement(bool judgement)

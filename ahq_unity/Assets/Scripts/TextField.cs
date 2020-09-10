@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class TextField : MonoBehaviour
 {
+    public string stringToEdit = "Tell me a story";
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    public string stringToEdit = "Tell me a story";
-
     void OnGUI()
     {
         // Make a text field that modifies stringToEdit.
-        stringToEdit = GUI.TextField(new Rect(10, 10, 200, 20), stringToEdit, 25);
+        stringToEdit = GUI.TextField(new Rect(312, 100, 400, 200), stringToEdit, 250000);
     }
 
 
