@@ -1,0 +1,12 @@
+@page
+@using RazorPagesIntro.Pages
+@model Index2Model
+
+<div class="text-center">
+    <h1>Hello World!</h1>
+</div>
+<h2>Separate page model</h2>
+<p>
+    @Model.Message
+</p>
+
