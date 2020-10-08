@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
@@ -16,10 +17,11 @@ namespace RazorPagesIntro.Pages
         }
 
         /* // Form submissions */
-        /* public IActionResult OnPost([FromForm]string name) */
-        /* { */
-        /*     TempData["Name"] = name; */
-        /*     return RedirectToPage("Index"); */
-        /* } */
+        public IActionResult OnPost([FromForm]string name)
+        {
+            TempData["Name"] = name;
+            /* Message += $" Here's the name { name }"; */
+            return RedirectToPage("Index");
+        }
     }
 }
